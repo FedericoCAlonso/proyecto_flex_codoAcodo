@@ -10,12 +10,12 @@ body{
 }
 
 .barraNavegacion {
-    position: fixed; 
+    /*position: fixed; 
     top: 0; 
-    left: 0; 
+    left: 0; */
     width: 100%;
     display: flex;
-    padding: 0px 10vw 1vh 10vw; 
+    padding: 0px 8vw 1vh 8vw; 
     background-color: #333a40;
     height: 15vh;
     justify-content:space-between;
@@ -28,7 +28,7 @@ body{
     color: white;
 }
 .logo{
-    height: 80px;
+    height: 60px;
 }
 .navegacion ul{
     /* height: 100%; */
@@ -39,8 +39,8 @@ body{
 }
 .linkNav{
     text-decoration: none;
-    padding-left:1.3rem;
-    font-size: 1rem;
+    padding-left:1rem;
+    font-size: .8rem;
     font-weight: 500;
     color: white; 
 }
@@ -64,14 +64,18 @@ body{
     flex-direction: column;
     padding-right: 10vw;
     text-align: right;
-    line-height: 2;
+    
     color: white;
     width: 50%;
     height: 50%;
 }
 .infoPromo h1{
-    font-size: 2.5em;;
+    font-size: 2rem;;
     font-weight: 600;
+}
+.infoPromo p{
+    font-size: 0.8rem;
+    line-height: 1.5;
 }
 .infoPromo div{
     display: flex;
@@ -81,20 +85,53 @@ body{
     /* background-color: blue; */
 }
 .botonPromo{
-    width: 215px;
-    height: 54px;
-    margin: 18px;
+    width: 180px;
+    height: 45px;
+    margin: 10px;
     border: 2px solid white;
-    border-radius: 9px;
+    border-radius: 6px;
     background-color:  transparent;
     color: white;
-    font-size: 1em;
+    font-size: 0.8rem;
 }
 :hover.botonPromo{
     background-color: antiquewhite;
     color: black;
+    border: 2px solid antiquewhite;
 }
 .resaltado{
     background-color: #27a844;
     border: 2px solid #27a844;
+}
+
+.contenedorOradores{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 1vh 15vw 1vh 15vw;
+}
+.contenedorOradores h2{
+    text-align: center;
+    text-transform: uppercase;
+    /*background-color: green;*/
+}
+.superHeader{
+    font-size:2em
+}
+.tarjetas{
+    display: flex;
+    /*justify-content:center;*/
+    align-items:start;
+
+}
+.tarjetas div{
+    width: 25vw;
+    margin: 10px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+}
+.tarjetas img{
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    width: 100%;
 }

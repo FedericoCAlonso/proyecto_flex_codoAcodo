@@ -10,14 +10,20 @@
     <title>TP Integrador HTML </title>
 </head>
 
-<body>
+<body id="index">
     <header class="header">
         <div class="barraNavegacion">
             <div class="grupoLogo">
-                <a href="./index.html"><img src="./assets/images/codoacodo.png" alt="Logo codo a codo" class="logo"></a> 
+                <a href="#index"><img src="./assets/images/codoacodo.png" alt="Logo codo a codo" class="logo"></a> 
                 <h2>Conf Bs. As.</h2>
             </div>
-            <nav class="navegacion">
+
+            <nav class="navegacion" id="menuNav" >
+                <div class="botonNav">
+                    <a href="#menuNav">
+                        Acá
+                    </a>
+                </div>
                 <ul>
                     <li><a class="linkNav" href="#conferencia">La Conferencia</a></li>
                     <li><a class="linkNav" href="#oradores">Los oradores</a></li>
@@ -26,6 +32,7 @@
                     <li><a class="linkNav comprar" href="./pages/tienda.html">Comprar tickets</a></li>
                 </ul>
             </nav>
+
         </div>
         <section id="conferencia" class="promo">
             <div class="infoPromo">

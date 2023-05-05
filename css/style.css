@@ -13,7 +13,7 @@ body{
     position: fixed; 
     top: 0; 
     left: 0; 
-    width: 100%;
+    width: 100vw;
     display: flex;
     padding: 0px 8vw 1vh 8vw; 
     background-color: #333a40;
@@ -30,8 +30,17 @@ body{
 .logo{
     height: 70px;
 }
-.navegacion ul{
-    /* height: 100%; */
+.botonNav {
+    display: none;
+    width:40px;
+    height:40px;
+    border-radius: 5px;
+    background: red;
+}
+
+nav.navegacion ul{
+    /* height: 100%;
+     */
     list-style: none;
     display:flex;
     align-items: center;
@@ -44,9 +53,7 @@ body{
     font-weight: 500;
     color:darkgray; 
 }
-.linkNav:target{
-    color:blue;
-}
+
 .comprar{
     color:#27a844;
 }
@@ -139,4 +146,72 @@ body{
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     width: 100%;
+}
+
+/*breakpoint para celular de 0 a 768px*/
+@media screen and (max-width: 767px)   {
+    .barraNavegacion{
+        bottom: 0vh; 
+        top:unset;
+        left: 0; 
+        background-color: rgb(50, 157, 245);
+        flex-direction:row;
+        /*height: initial;*/
+        justify-content:space-around;
+        align-items: center;
+    }
+    nav.navegacion ul{
+        display:none;
+    }
+    .botonNav{
+        display: block;
+    }
+    nav:target ul{
+        position:fixed;
+        bottom:0vh;
+        right: 0vw;     
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        background: rgba(0,0,0,.8);
+        color: white;
+        font-size: 2rem;
+        border-radius: 5px;
+        padding: 1vh;
+          
+    }
+    nav:target div{
+        display: none;
+    }
+    .promo {
+        margin-top:0;
+        margin-bottom:15vh;
+    }
+
+}
+
+/*tablet*/
+@media screen and (min-width:768px) and (max-width:1023px) {
+    /*se cargaron los estilos dentro de las llaves*/
+    .barraNavegacion{
+        background-color: rgb(245, 213, 50);
+        flex-direction: column;
+        height: initial;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+/*notebook*/
+@media screen and (min-width:1024px) and (max-width: 1400px) {
+    .barraNavegacion{
+        background-color: rgb(245, 50, 222);
+    }
+
+}
+
+@media screen and (min-width:1401px) {
+    
 }

@@ -148,6 +148,10 @@ nav.navegacion ul{
     border-top-left-radius: 3px;
     width: 100%;
 }
+.tarjetaLugar {
+    width:100vw;
+
+}
 .tarjetaLugar img{
     width:100%;
 }

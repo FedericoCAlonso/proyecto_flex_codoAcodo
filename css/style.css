@@ -60,7 +60,7 @@ nav.navegacion ul{
 
 .promo {
     background:linear-gradient(to right, #0000009c,#0000009c ),url("../assets/images/ba1.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 85vh; 
@@ -147,6 +147,9 @@ nav.navegacion ul{
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     width: 100%;
+}
+.lugar img{
+    width:100vw;
 }
 
 /*breakpoint para celular de 0 a 768px*/

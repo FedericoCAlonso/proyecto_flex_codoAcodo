@@ -1,231 +1,315 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Noto Sans', sans-serif;
 }
 
 .barraNavegacion {
-    position: fixed; 
-    top: 0; 
-    left: 0; 
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     display: flex;
-    padding: 0px 8vw 1vh 8vw; 
+    padding: 0px 8vw 1vh 8vw;
     background-color: #333a40;
     height: 15vh;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
-.grupoLogo{
+
+.grupoLogo {
     /* background-color: blue; */
     display: flex;
     align-items: center;
     color: white;
 }
-.logo{
+
+.grupoLogo img {
     height: 70px;
 }
+
+.grupoLogo h2 {
+    font-size: 2rem;
+}
+
 .botonNav {
     display: none;
-    width:40px;
-    height:40px;
+    width: 40px;
+    height: 40px;
     /* border-radius: 5px;
     background: red; */
 }
 
-nav.navegacion ul{
+nav.navegacion ul {
     /* height: 100%;
      */
     list-style: none;
-    display:flex;
+    display: flex;
     align-items: center;
     flex-direction: row;
 }
-.linkNav{
+
+.linkNav {
     text-decoration: none;
-    padding-left:1rem;
+    padding-left: 1rem;
     font-size: 1rem;
     font-weight: 500;
-    color:darkgray; 
+    color: darkgray;
 }
 
-.comprar{
-    color:#27a844;
+.comprar {
+    color: #27a844;
 }
 
 .promo {
-    background:linear-gradient(to right, #0000009c,#0000009c ),url("../assets/images/ba1.jpg");
+    background: linear-gradient(to right, #0000009c, #0000009c), url("../assets/images/ba1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 85vh; 
+    height: 85vh;
     width: 100vw;
     margin-top: 15vh;
-    display:flex;
+    display: flex;
     justify-content: flex-end;
-    align-items:center;
+    align-items: center;
 }
-.infoPromo{
+
+.infoPromo {
     /* background-color: green; */
-    display:flex;
+    display: flex;
     justify-content: space-around;
     flex-direction: column;
     padding-right: 10vw;
     text-align: right;
-    
+
     color: white;
     width: 50%;
     height: 50%;
 }
-.infoPromo h1{
-    font-size: 2.5rem;;
+
+.infoPromo h1 {
+    font-size: 2.5rem;
+    ;
     font-weight: 600;
 }
-.infoPromo p{
+
+.infoPromo p {
     font-size: 1rem;
     line-height: 2;
 }
-.infoPromo div{
+
+.infoPromo div {
     display: flex;
     flex-direction: row-reverse;
-    align-items:center;
+    align-items: center;
     /* width: 50%; */
     /* background-color: blue; */
 }
-.botonPromo{
+
+.botonPromo {
     width: 180px;
     height: 45px;
     margin: 10px;
     border: 2px solid white;
     border-radius: 6px;
-    background-color:  transparent;
+    background-color: transparent;
     color: white;
     font-size: 1rem;
 }
-:hover.botonPromo{
+
+:hover.botonPromo {
     background-color: antiquewhite;
     color: black;
     border: 2px solid antiquewhite;
 }
-.resaltado{
+
+.resaltado {
     background-color: #27a844;
     border: 2px solid #27a844;
 }
 
-.contenedorOradores{
+.contenedorOradores {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     padding: 1vh 15vw 1vh 15vw;
 }
-.contenedorOradores h2{
+
+.contenedorOradores h2 {
     text-align: center;
     text-transform: uppercase;
     /*background-color: green;*/
 }
-.superHeader{
-    font-size:2em
+
+.superHeader {
+    font-size: 2em
 }
-.tarjetas{
+
+.tarjetas {
     display: flex;
     /*justify-content:center;*/
-    align-items:start;
+    align-items: start;
 
 }
-.tarjetas div{
+
+.tarjetas div {
     width: 25vw;
     margin: 10px;
     border: 1px solid #d4d4d4;
     border-radius: 4px;
 }
-.tarjetas img{
+
+.tarjetas img {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     width: 100%;
 }
+
 .tarjetaLugar {
-    width:100vw;
+    width: 100vw;
 
 }
-.tarjetaLugar img{
-    width:100%;
+
+.tarjetaLugar img {
+    width: 100%;
 }
 
 /*breakpoint para celular de 0 a 768px*/
-@media screen and (max-width: 767px)   {
-    .barraNavegacion{
-        width:100vw;
-        bottom: 0vh; 
-        top:unset;
+@media screen and (max-width: 767px) {
+    .barraNavegacion {
+        width: 100vw;
+        height: 10vh;
+        ;
+        bottom: 0vh;
+        top: unset;
         background-color: rgb(50, 157, 245);
-        flex-direction:row;
+        flex-direction: row;
         /*height: initial;*/
-        justify-content:space-around;
+        justify-content: space-around;
         align-items: center;
     }
-    nav.navegacion ul{
-        display:none;
+    .grupoLogo img {
+        height: 60px;
     }
-    .botonNav{
+    
+    .grupoLogo h2 {
+        font-size: 1.5rem;
+    }
+
+    nav.navegacion ul {
+        display: none;
+    }
+
+    .botonNav {
         display: block;
     }
-    nav:target ul{
-        position:fixed;
-        bottom:0vh;
-        right: 0vw;     
+
+    nav:target ul {
+        position: fixed;
+        bottom: 0vh;
+        right: 0vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        background: rgba(0,0,0,.8);
+        background: rgba(0, 0, 0, .8);
         color: white;
         font-size: 2rem;
         border-radius: 5px;
         padding: 1vh;
-          
+
     }
-    nav:target div{
+
+    nav:target div {
         display: none;
     }
+
     .promo {
-        margin-top:0;
-        margin-bottom:15vh;
+        height: 90vh;
+        margin-top: 0;
+        margin-bottom: 10vh;
     }
+
     .infoPromo {
         /* font-size: .8rem; */
- 
+
         width: 100%;
-        padding:10%;
+        padding: 10%;
     }
-    .infoPromo p{
+
+    .infoPromo p {
         font-size: .8rem;
         text-align: justify;
     }
-    .infoPromo h1{
+
+    .infoPromo h1 {
         font-size: 1.5rem;
     }
-    .botonPromo{
-        width: 30vw;
-        height: 10vh;
-        margin: 1vh;
+
+    .botonPromo {
+        width: 90px;
+        height: 40px;
+        margin: 5px;
         border: 2px solid white;
         border-radius: 4px;
-        background-color:  transparent;
+        background-color: transparent;
         color: white;
         font-size: .8rem;
+    }
+
+    .contenedorOradores {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0%;
+    }
+
+    .contenedorOradores h2 {
+        text-align: center;
+        text-transform: uppercase;
+        /*background-color: green;*/
+    }
+
+    .superHeader {
+        font-size: 1.5rem
+    }
+
+    .tarjetas {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .tarjetas div {
+        width: 100%;
+        margin: 0%;
+        padding: 5px;
+        border: 1px solid #d4d4d4;
+        border-radius: 4px;
+    }
+
+    .tarjetas img {
+        border-radius: 5px;
+        width: 100%;
     }
 
 }
 
 /*tablet*/
 @media screen and (min-width:768px) and (max-width:1023px) {
+
     /*se cargaron los estilos dentro de las llaves*/
-    .barraNavegacion{
+    .barraNavegacion {
         background-color: rgb(245, 213, 50);
         flex-direction: column;
         height: initial;
@@ -237,12 +321,10 @@ nav.navegacion ul{
 
 /*notebook*/
 @media screen and (min-width:1024px) and (max-width: 1400px) {
-    .barraNavegacion{
+    .barraNavegacion {
         background-color: rgb(245, 50, 222);
     }
 
 }
 
-@media screen and (min-width:1401px) {
-    
-}
+@media screen and (min-width:1401px) {}

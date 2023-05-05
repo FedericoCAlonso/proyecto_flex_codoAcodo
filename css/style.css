@@ -60,7 +60,7 @@ nav.navegacion ul{
 
 .promo {
     background:linear-gradient(to right, #0000009c,#0000009c ),url("../assets/images/ba1.jpg");
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     height: 85vh; 

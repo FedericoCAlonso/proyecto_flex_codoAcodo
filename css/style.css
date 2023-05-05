@@ -34,8 +34,8 @@ body{
     display: none;
     width:40px;
     height:40px;
-    border-radius: 5px;
-    background: red;
+    /* border-radius: 5px;
+    background: red; */
 }
 
 nav.navegacion ul{
@@ -159,9 +159,9 @@ nav.navegacion ul{
 /*breakpoint para celular de 0 a 768px*/
 @media screen and (max-width: 767px)   {
     .barraNavegacion{
+        width:100vw;
         bottom: 0vh; 
         top:unset;
-        left: 0; 
         background-color: rgb(50, 157, 245);
         flex-direction:row;
         /*height: initial;*/
@@ -195,6 +195,29 @@ nav.navegacion ul{
     .promo {
         margin-top:0;
         margin-bottom:15vh;
+    }
+    .infoPromo {
+        /* font-size: .8rem; */
+ 
+        width: 100%;
+        padding:10%;
+    }
+    .infoPromo p{
+        font-size: .8rem;
+        text-align: justify;
+    }
+    .infoPromo h1{
+        font-size: 1.5rem;
+    }
+    .botonPromo{
+        width: 30vw;
+        height: 10vh;
+        margin: 1vh;
+        border: 2px solid white;
+        border-radius: 4px;
+        background-color:  transparent;
+        color: white;
+        font-size: .8rem;
     }
 
 }

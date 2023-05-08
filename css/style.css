@@ -16,9 +16,10 @@ body {
     left: 0;
     width: 100vw;
     display: flex;
-    padding: 0px 8vw 1vh 8vw;
+    padding: 0px 8vw 0px 8vw;
     background-color: #333a40;
-    height: 15vh;
+    /* height: 15vh; */
+    height: 75px;                   /*<-- tener presente para el margen, recordar que es fixed #barraNav*/
     justify-content: space-between;
     align-items: center;
 }
@@ -31,11 +32,12 @@ body {
 }
 
 .grupoLogo img {
-    height: 70px;
+    height: 75px;
 }
 
 .grupoLogo h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .botonNav {
@@ -47,8 +49,7 @@ body {
 }
 
 nav.navegacion ul {
-    /* height: 100%;
-     */
+  
     list-style: none;
     display: flex;
     align-items: center;
@@ -67,36 +68,41 @@ nav.navegacion ul {
     color: #27a844;
 }
 
+/*Contenedor para promo y para lugar*/
+.contenedorA{
+    height: max(calc(100vh - 75px), 200px);  /*Calculado para respetar el margen por la barra fixed*/
+    width: 100vw;
+    margin-top: 75px;                       /*<-- margen #barraNav*/          
+    display: flex;
+    color: white;
+}
+
+/*Configuración especial promo*/
 .promo {
     background: linear-gradient(to right, #0000009c, #0000009c), url("../assets/images/ba1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 85vh;
-    width: 100vw;
-    margin-top: 15vh;
-    display: flex;
     justify-content: flex-end;
-    align-items: center;
-}
-
-.infoPromo {
-    /* background-color: green; */
-    display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    /* text-align: right; */
+  
     padding-right: 10vw;
-    text-align: right;
-
-    color: white;
-    width: 50%;
-    height: 50%;
 }
 
-.infoPromo h1 {
+.promo p {
+    text-align: right;
+    line-height: 2;
+    width: 40%;
+    margin: 1rem 0px 1rem 0px;
+}
+
+.promo h1 {
     font-size: 2.5rem;
-    ;
     font-weight: 600;
+
 }
 
 .infoPromo p {
@@ -104,15 +110,8 @@ nav.navegacion ul {
     line-height: 2;
 }
 
-.infoPromo div {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    /* width: 50%; */
-    /* background-color: blue; */
-}
 
-.botonPromo {
+.boton {
     width: 180px;
     height: 45px;
     margin: 10px;
@@ -123,7 +122,7 @@ nav.navegacion ul {
     font-size: 1rem;
 }
 
-:hover.botonPromo {
+:hover.boton {
     background-color: antiquewhite;
     color: black;
     border: 2px solid antiquewhite;
@@ -171,13 +170,23 @@ nav.navegacion ul {
     width: 100%;
 }
 
-.tarjetaLugar {
-    width: 100vw;
-
+.lugar {
+    
+    flex-direction:row;
+    height: max-content;
 }
 
-.tarjetaLugar img {
-    width: 100%;
+.lugar img {
+    display:block;
+    width: 50%;
+    margin: 1px;
+}
+.lugar div{
+    line-height: 2;
+    background-color: #333a40;
+    width: 50%;
+    margin:1px;
+    padding: 20px;
 }
 
 /*breakpoint para celular de 0 a 768px*/
@@ -191,7 +200,7 @@ nav.navegacion ul {
         background-color: rgb(50, 157, 245);
         flex-direction: row;
         /*height: initial;*/
-        justify-content: space-around;
+        justify-content:space-between;
         align-items: center;
     }
     .grupoLogo img {
@@ -265,11 +274,14 @@ nav.navegacion ul {
 
     .contenedorOradores {
         width: 100vw;
+        /* height: 90vh; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 0%;
+        margin-bottom: 10vh;
+
     }
 
     .contenedorOradores h2 {

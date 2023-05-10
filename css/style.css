@@ -19,7 +19,8 @@ body {
     padding: 0px 8vw 0px 8vw;
     background-color: #333a40;
     /* height: 15vh; */
-    height: 75px;                   /*<-- tener presente para el margen, recordar que es fixed #barraNav*/
+    height: 75px;
+    /*<-- tener presente para el margen, recordar que es fixed #barraNav*/
     justify-content: space-between;
     align-items: center;
 }
@@ -49,7 +50,7 @@ body {
 }
 
 nav.navegacion ul {
-  
+
     list-style: none;
     display: flex;
     align-items: center;
@@ -69,10 +70,12 @@ nav.navegacion ul {
 }
 
 /*Contenedor para promo y para lugar*/
-.contenedorA{
-    height: max(calc(100vh - 75px), 200px);  /*Calculado para respetar el margen por la barra fixed*/
+.contenedorA {
+    height: max(calc(100vh - 75px), 200px);
+    /*Calculado para respetar el margen por la barra fixed*/
     width: 100vw;
-    margin-top: 75px;                       /*<-- margen #barraNav*/          
+    padding-top: 75px;
+    /*<-- padding #barraNav*/
     display: flex;
     color: white;
 }
@@ -85,9 +88,9 @@ nav.navegacion ul {
     background-repeat: no-repeat;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-end;
+    align-items: flex-end;
     /* text-align: right; */
-  
+
     padding-right: 10vw;
 }
 
@@ -136,7 +139,7 @@ nav.navegacion ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1vh 15vw 1vh 15vw;
+    padding: 75px 15vw 1vh 15vw;
 }
 
 .oradores h2 {
@@ -144,13 +147,18 @@ nav.navegacion ul {
     text-transform: uppercase;
     /*background-color: green;*/
 }
-.superHeader{
-    font-size:1.5rem;
+
+.superHeader {
+    font-size: .9rem;
     text-transform: uppercase;
     text-align: center;
+    color: gray;
 }
-.superHeader span{
-    font-size: 2rem
+
+.superHeader span {
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
 }
 
 .tarjetas {
@@ -174,30 +182,100 @@ nav.navegacion ul {
 }
 
 .lugar {
-    
-    flex-direction:row;
+
+    flex-direction: row;
     height: max-content;
 }
 
 .lugar img {
-    display:block;
+    display: block;
     width: 50%;
     margin: 1px;
 }
-.lugar div{
+
+.lugar div {
     line-height: 2;
     background-color: #333a40;
     width: 50%;
-    margin:1px;
+    margin: 1px;
     padding: 20px;
 }
 
-.contenedorC{
+.convertite {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50wv;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
 
+.convertite p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.formularioOrador {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.formularioOrador div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.formularioOrador div input {
+    width: 48%;
+    height: 1.5rem;
+    border: 1px solid #c9c8c8;
+    border-radius: 5px;
+}
+
+.formularioOrador div textarea {
+    width: 100%;
+    border: 1px solid #c9c8c8;
+    border-radius: 5px;
+}
+
+.formularioOrador p {
+    text-align: left;
+    padding-top: 1rem;
+    color: gray;
+}
+
+.formularioOrador div:last-child input {
+    width: 100%;
+    background-color: #96c93e;
+    border: 1px solid #96c93e;
+    color: white;
+
+}
+
+.footer {
+    margin-top:2rem;
+    background-color: #1e4f6d;
+    height: 75px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+}
+
+.footer ul {
+    width:100%;
+    padding: 0% 8% 0% 8%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.footer ul li{
+    width:11%;
+    color: white;
 }
 
 /*breakpoint para celular de 0 a 768px*/
@@ -209,13 +287,14 @@ nav.navegacion ul {
         top: unset;
         flex-direction: row;
         /*height: initial;*/
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: center;
     }
+
     .grupoLogo img {
         height: 60px;
     }
-    
+
     .grupoLogo h2 {
         font-size: 1.5rem;
     }
@@ -253,11 +332,11 @@ nav.navegacion ul {
         margin-top: 0;
         margin-bottom: 10vh;
         padding: 10%;
-        align-items:flex-start;
+        align-items: flex-start;
 
     }
 
-  
+
     .promo h1 {
         font-size: 1.5rem;
     }
@@ -322,9 +401,11 @@ nav.navegacion ul {
         border-radius: 5px;
         width: 100%;
     }
+
     .lugar img {
         display: none;
     }
+
     .lugar {
         background: linear-gradient(to right, #0000009c, #0000009c), url("../assets/images/honolulu.jpg");
         background-size: cover;
@@ -333,9 +414,10 @@ nav.navegacion ul {
         flex-direction: column;
         justify-content: center;
     }
+
     .lugar div {
-        background:none;
-        width:90%;
+        background: none;
+        width: 90%;
     }
 }
 
@@ -349,15 +431,19 @@ nav.navegacion ul {
         justify-content: center;
         align-items: center;
     }
-    .contenedorB{
-        padding:1vh;
+
+    .contenedorB {
+        padding: 1vh;
     }
-    .tarjetas div{
-            width: 30vw;
+
+    .tarjetas div {
+        width: 30vw;
     }
+
     .lugar img {
         display: none;
     }
+
     .lugar {
         background: linear-gradient(to right, #0000009c, #0000009c), url("../assets/images/honolulu.jpg");
         background-size: cover;
@@ -366,13 +452,15 @@ nav.navegacion ul {
         flex-direction: column;
         justify-content: center;
     }
+
     .lugar div {
-        background:none;
-        width:90%;
+        background: none;
+        width: 90%;
     }
 
 }
 
 /*notebook*/
 @media screen and (min-width:1024px) and (max-width: 1400px) {}
+
 @media screen and (min-width:1401px) {}
